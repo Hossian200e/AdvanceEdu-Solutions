@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | AdvanceEdu Solution School & College</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <!-- Logo and Title -->
+      <div class="login-header">
+        <img src="image/logo.jpeg" alt="Logo" class="logo">
+        <h2>AdvanceEdu Solution School & College</h2>
+        <p>Sign in to continue.</p>
+      </div>
+
+      <!-- Form -->
+      <form id="loginForm">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" required>
+
+        <div class="options">
+          <label><input type="checkbox"> Remember me</label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="login-btn">Log In</button>
+      </form>
+
+      <!-- Registration Link -->
+      <p class="register-text">
+        If you are a student and do not have an account yet, please click the button below to register:
+      </p>
+      <a href="register.html" class="register-btn">Registration</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>Copyright © AdvanceEdu Solution.</p>
+    </footer>
+  </div>
+
+  <!-- Simple Login Script -->
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      let username = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
+
+      // Simple demo login (replace with backend validation later)
+      if(username === "admin" && password === "1234") {
+        window.location.href = "dashboard.html"; // redirect to dashboard
+      } else {
+        alert("Invalid Username or Password");
+      }
+    });
+  </script>
+</body>
+</html>

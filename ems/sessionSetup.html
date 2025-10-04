@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session Setup</title>
+  <link rel="stylesheet" href="sessionSetup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="image/logo.jpeg" alt="Logo">
+      <h3>AdvanceEdu Solution School & College</h3>
+    </div>
+
+    <!-- Main Menu Heading -->
+    <div class="menu-heading">MAIN MENU</div>
+
+    <nav>
+      <ul>
+        <!-- User Management Dropdown -->
+        <li class="dropdown">
+        <input type="checkbox" id="user-toggle">
+        <label for="user-toggle" class="dropdown-label">
+          <i class="fa fa-users"></i> User Management
+          <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+        </label>
+        <ul class="submenu">
+          <li class="circle"><a href="userGroupList.html">User Group List</a></li>
+          <li class="dot"><a href="userGroupRoleManagement.html">User Group Role Management</a></li>
+        </ul>
+        </li>
+
+        <!-- System Management Dropdown -->
+        <li class="dropdown">
+          <input type="checkbox" id="system-toggle">
+          <label for="system-toggle" class="dropdown-label">
+            <i class="fa fa-cogs"></i> System Management
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+            <li class="circle"><a href="#">Task</a></li>
+            <li class="dot"><a href="#">User</a></li>
+          </ul>
+        </li>
+
+        <!-- Dashboard -->
+        <li class="active">
+          <i class="fa fa-home"></i> Dashboard
+        </li>
+
+        <!-- Global Configurations -->
+        <li class="dropdown">
+          <input type="checkbox" id="global-toggle">
+          <label for="global-toggle" class="dropdown-label">
+            <i class="fa fa-globe"></i> Global Configurations
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+
+
+       
+        <!-- Institute Setup has its own nested submenu -->
+        <li class="dropdown sub-dropdown">
+          <input type="checkbox" id="institute-toggle">
+          <label for="institute-toggle" class="dropdown-label">Institute Setup
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu sub-submenu">
+            <li class="dot"><a href="profileSetup.html">Profile Setup</a></li>
+            <li class="dot"><a href="campusSetup.html">Campus Setup</a></li>
+            <li class="dot"><a href="shiftSetup.html">Shift Setup</a></li>
+            <li class="dot"><a href="meduimSetup.html">Medium Setup</a></li>
+            <li class="dot"><a href="educationLevelSetup.html">Education Level Setup</a></li>
+            <li class="dot"><a href="departmentsSetup.html">Department Setup</a></li>
+            <li class="dot"><a href="classSetup.html">Class Setup</a></li>
+            <li class="dot"><a href="sectionSetup.html">Section Setup</a></li>
+            <li class="dot"><a href="subjectSetup.html">Subject Setup</a></li>
+            <li class="dot"><a href="subject-sub-type.html">Subject Sub Types</a></li>
+            <li class="dot"><a href="class-subject.html">Class Subjects</a></li>
+            <li class="dot"><a href="sessionSetup.css">Session Setup</a></li>
+            <li class="dot"><a href="background-upload.html">Background Upload</a></li>
+            <li class="dot"><a href="#">Payment Getway API</a></li>
+            <li class="dot"><a href="#">Payment Getway Charge</a></li>
+          </ul>
+        </li>
+            <li class="dot"><a href="#">Global Settings</a></li>
+            <li class="dot"><a href="#">Clear Cache</a></li>
+          </ul>
+        </li>
+
+        <!-- Accounts -->
+        <li class="dropdown">
+          <input type="checkbox" id="accounts-toggle">
+          <label for="accounts-toggle" class="dropdown-label">
+            <i class="fa fa-file-invoice"></i> Accounts
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+
+
+            <!-- Configurations -->
+            <li class="dropdown sub-dropdown">
+              <input type="checkbox" id="accounts-config-toggle">
+              <label for="accounts-config-toggle" class="dropdown-label">Configurations
+                <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+              </label>
+              <ul class="submenu sub-submenu">
+                <li class="dot"><a href="#">Trasaction Types</a></li>
+                <li class="dot"><a href="#">Transaction Head</a></li>
+                <li class="dot"><a href="#">Fee Collection Template</a></li>
+                <li class="dot"><a href="#">Invoice Configs</a></li>
+                <li class="dot"><a href="#">Discount Configs</a></li>
+                <li class="dot"><a href="#">Account Closing</a></li>
+                <li class="dot"><a href="#">Fine </a></li>
+                <li class="dot"><a href="#">Due(New)</a></li>
+              </ul>
+            </li>
+            
+            <!-- Income -->
+            <li class="dropdown sub-dropdown">
+            <input type="checkbox" id="income-toggle">
+            <label for="income-toggle" class="dropdown-label">Income
+              <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+            </label>
+            <ul class="submenu sub-submenu">
+              <li class="dot"><a href="#">Manual Fee Collection</a></li>
+              <li class="dot"><a href="#">Others Income</a></li>
+              <li class="dot"><a href="#">Unpaid Students</a></li>
+              <li class="dot"><a href="#">Extra Fee Collection</a></li>
+              <li class="dot"><a href="#">Bank Fee Collection</a></li>
+              <li class="dot"><a href="#">Manual Fee Payment List</a></li>
+              <li class="dot"><a href="#">Extra Fee Collection Request List</a></li>
+            </ul>
+          </li>
+
+          <!-- Expenses -->
+          <li class="dropdown sub-dropdown">
+            <input type="checkbox" id="expenses-toggle">
+            <label for="expenses-toggle" class="dropdown-label">Expenses
+              <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+            </label>
+            <ul class="submenu sub-submenu">
+              <li class="dot"><a href="#">Teachers Salary</a></li>
+              <li class="dot"><a href="#">Other Expenses</a></li>
+            </ul>
+          </li>
+
+          <!-- Reports -->
+          <li class="dropdown sub-dropdown">
+            <input type="checkbox" id="accounts-reports-toggle">
+            <label for="accounts-reports-toggle" class="dropdown-label">Reports
+              <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+            </label>
+            <ul class="submenu sub-submenu">
+              <li class="dot"><a href="#">Invoice List(New)</a></li>
+              <li class="dot"><a href="#">Total Collection Report</a></li>
+              <li class="dot"><a href="#">Monthly Fee</a></li>
+              <li class="dot"><a href="#">Invoice List</a></li>
+              <li class="dot"><a href="#">Monthly Balance Sheet</a></li>
+              <li class="dot"><a href="#">Studets Balance Sheet</a></li>
+              <li class="dot"><a href="#">Class Wise Balance Sheet</a></li>
+              <li class="dot"><a href="#">Admission Fee Studets</a></li>
+              <li class="dot"><a href="#">Form Filup Paymet Reports</a></li>
+              <li class="dot"><a href="#">Admission Payment Reports</a></li>
+              <li class="dot"><a href="#">Apply For Admission</a></li>
+              <li class="dot"><a href="#">Events Payment Summary</a></li>
+              <li class="dot"><a href="#">Transaction Summary Report</a></li>
+              <li class="dot"><a href="#">Transaction Head Wise Report</a></li>
+              <li class="dot"><a href="#">Class Wise Category Report</a></li>
+              <li class="dot"><a href="#">Paid Upaid List</a></li>
+              <li class="dot"><a href="#">Studets Payment Details</a></li>
+              <li class="dot"><a href="#">Student Payment History</a></li>
+              <li class="dot"><a href="#">Class Wise Monthly Due</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+        <!-- Teacher & Staff Setup -->
+        <li class="dropdown">
+          <input type="checkbox" id="teacher-toggle">
+          <label for="teacher-toggle" class="dropdown-label">
+            <i class="fa fa-user-tie"></i> Teacher & Staff
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+            <li class="circle"><a href="#">Teachers Bulk Update</a></li>
+            <li class="dot"><a href="#">Add Teacher</a></li>
+            <li class="dot"><a href="#">Teacher Bulk upload</a></li>
+            <li class="dot"><a href="#">Teacher List</a></li>
+            <li class="dot"><a href="#">Departmental Head</a></li>
+            <li class="dot"><a href="#">Teacher Course Advising</a></li>
+            <li class="dot"><a href="#">Upload Lecture Sheet</a></li>
+            <li class="dot"><a href="#"> Teacher List Print</a></li>
+            <li class="dot"><a href="#">Lesson Plan</a></li>
+            <li class="dot"><a href="#">Employee Bulk Update</a></li>
+            <li class="dot"><a href="#">Others Staff</a></li>  
+            <li class="dot"><a href="#">Employee Designation</a></li> 
+            <li class="dot"><a href="#">Teacher ID Card</a></li> 
+            <li class="dot"><a href="#">Class Teacher & Accountant Allocation</a></li> 
+            <li class="dot"><a href="#">Remove Duplicate Teacher</a></li> 
+          </ul>
+        </li>
+
+        <!-- Student Setup -->
+        <li class="dropdown">
+          <input type="checkbox" id="student-toggle">
+          <label for="student-toggle" class="dropdown-label">
+            <i class="fa fa-user-graduate"></i> Student Setup
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+            <li class="dot"><a href="#">Add Student</a></li>
+            <li class="circle"><a href="#">Student List</a></li>
+            <li class="dot"><a href="#">Student Code Prefix</a></li>
+            <li class="dot"><a href="#">Student Bulk upload</a></li>
+            <li class="dot"><a href="#">Bulk Course Advising </a></li>
+            <li class="dot"><a href="#">Archive Students</a></li>
+            <li class="dot"><a href="#">Student Course Advising</a></li>
+            <li class="dot"><a href="#">Student Details List</a></li>
+            <li class="dot"><a href="#"> Student List Print</a></li>
+            <li class="dot"><a href="#">Student Promotion</a></li>
+            <li class="dot"><a href="#">Student Migration</a></li>
+            <li class="dot"><a href="#">Student Bulk Update</a></li>  
+            <li class="dot"><a href="#">Bulk Student Image Download</a></li> 
+            <li class="dot"><a href="#">Students ID Card</a></li> 
+            <li class="dot"><a href="#">Subject Wise Students</a></li> 
+            <li class="dot"><a href="#">Remove Duplicate Students</a></li> 
+
+          </ul>
+        </li>
+
+        <!-- SMS Setup -->
+        <li class="dropdown">
+          <input type="checkbox" id="sms-toggle">
+          <label for="sms-toggle" class="dropdown-label">
+            <i class="fa fa-sms"></i> SMS Setup
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+            <li class="circle"><a href="#">Send SMS</a></li>
+            <li class="dot"><a href="#">SMS Reports</a></li>
+            <li class="circle"><a href="#">SMS API Configurations</a></li>
+            <li class="dot"><a href="#">SMS Template Setup</a></li> 
+            <li class="dot"><a href="#">Student Bulk SMS</a></li>
+            <li class="dot"><a href="#">Teacher Bulk SMS</a></li> 
+            <li class="dot"><a href="#">Bulk SMS Mixed</a></li>    
+          </ul>
+        </li>
+
+         <!-- Candidates -->
+         <li class="dropdown">
+          <input type="checkbox" id="candidates-toggle">
+          <label for="candidates-toggle" class="dropdown-label">
+            <i class="fa fa-users"></i> Candidates
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+            <li class="circle"><a href="#">Applicant List</a></li>
+            <li class="dot"><a href="#">Admissions Applicable Candidate(New)</a></li>
+          </ul>
+        </li>
+
+        <!-- Calendar View -->
+        <li class="dropdown">
+          <input type="checkbox" id="calendar-toggle">
+          <label for="calendar-toggle" class="dropdown-label">
+            <i class="fa fa-calendar"></i> Calendar View
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+            <li class="circle"><a href="#">Academic</a></li>
+            <li class="dot"><a href="#">Events</a></li>
+          </ul>
+        </li>
+
+        <!-- Class Routine -->
+        <li class="dropdown">
+          <input type="checkbox" id="routine-toggle">
+          <label for="routine-toggle" class="dropdown-label">
+            <i class="fa fa-clipboard-list"></i> Class Routine
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+            <li class="circle"><a href="#">Class Period</a></li>
+            <li class="dot"><a href="#">Class Routine</a></li>
+          </ul>
+        </li>
+
+        <!-- Exam & Result -->
+        <li class="dropdown">
+          <input type="checkbox" id="exam-toggle">
+          <label for="exam-toggle" class="dropdown-label">
+            <i class="fa fa-book"></i> Exam & Result
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+            
+            <!-- Exam Setup -->
+            <li class="dropdown sub-dropdown">
+              <input type="checkbox" id="exam-setup-toggle">
+              <label for="exam-setup-toggle" class="dropdown-label">Exam Setup
+                <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+              </label>
+              <ul class="submenu sub-submenu">
+                <li class="dot"><a href="#">Exam Template</a></li>
+                <li class="dot"><a href="#">Exam List</a></li>
+                <li class="dot"><a href="#">Sub Subject List</a></li>
+              </ul>
+            </li>
+
+            <!-- Result Setup -->
+            <li class="dropdown sub-dropdown">
+              <input type="checkbox" id="result-setup-toggle">
+              <label for="result-setup-toggle" class="dropdown-label">Result Setup
+                <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+              </label>
+              <ul class="submenu sub-submenu">
+                <li class="dot"><a href="#">Pass Config.</a></li>
+                <li class="dot"><a href="#">Result Config.</a></li>
+                <li class="dot"><a href="#">Merit Config.</a></li>
+                <li class="dot"><a href="#">Grade Point</a></li>
+              </ul>
+            </li>
+
+            <!-- Mark Entry System -->
+            <li class="dropdown sub-dropdown">
+              <input type="checkbox" id="mark-entry-toggle">
+              <label for="mark-entry-toggle" class="dropdown-label">Mark Entry System
+                <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+              </label>
+              <ul class="submenu sub-submenu">
+                <li class="dot"><a href="#">Mark Entry</a></li>
+                <li class="dot"><a href="#">Mark Entry Format</a></li>
+                <li class="dot"><a href="#">Teachers Mark Entry</a></li>
+              </ul>
+            </li>
+
+            <!-- Result Process -->
+            <li class="dropdown sub-dropdown">
+              <input type="checkbox" id="result-process-toggle">
+              <label for="result-process-toggle" class="dropdown-label">Result Process
+                <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+              </label>
+              <ul class="submenu sub-submenu">
+                <li class="dot"><a href="#">Process Result</a></li>
+                <li class="dot"><a href="#">Processed Exam List</a></li>
+                <li class="dot"><a href="#">Result Archive</a></li>
+                <li class="dot"><a href="#">Archive Result List</a></li>
+              </ul>
+            </li>
+
+            <!-- Exam Reports -->
+            <li class="dropdown sub-dropdown">
+              <input type="checkbox" id="exam-reports-toggle">
+              <label for="exam-reports-toggle" class="dropdown-label">Exam Reports
+                <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+              </label>
+              <ul class="submenu sub-submenu">
+                <li class="dot"><a href="#">Minimal Admit Card</a></li>
+                <li class="dot"><a href="#">Admid Card Overviwe </a></li>
+                <li class="dot"><a href="#">Marksheets</a></li>
+                <li class="dot"><a href="#">Result Summary</a></li>
+                <li class="dot"><a href="#">Combied Result</a></li>
+                <li class="dot"><a href="#">Subject Wise Result</a></li>
+                <li class="dot"><a href="#">Tabulation Sheet</a></li>
+                <li class="dot"><a href="#">Exam Mark View</a></li>
+                <li class="dot"><a href="#">Admid Card</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+        <!-- Lesson Plan -->
+        <li class="dropdown">
+          <input type="checkbox" id="lesson-toggle">
+          <label for="lesson-toggle" class="dropdown-label">
+            <i class="fa fa-tasks"></i> Lesson Plan
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+            <li class="circle"><a href="#">Plans</a></li>
+            <li class="dot"><a href="#">Reports</a></li>
+          </ul>
+        </li>
+
+        <!-- Reports -->
+        <li class="dropdown">
+          <input type="checkbox" id="reports-toggle">
+          <label for="reports-toggle" class="dropdown-label">
+            <i class="fa fa-chart-bar"></i> Reports
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+            <li class="circle"><a href="#">Attendance Reports</a></li>
+            <li class="dot"><a href="#">Subject Wise Student Att.</a></li>
+            <li class="dot"><a href="#">Student Taught List</a></li>
+            <li class="dot"><a href="#">Certificate Studies Print</a></li>
+            <li class="dot"><a href="#"> SMS Sending Report</a></li>
+            <li class="dot"><a href="#">Exam Seat Level List</a></li>
+            <li class="dot"><a href="#">Bus Student ID Card Print</a></li>
+            <li class="dot"><a href="#">Ekpay Transaction History Reports</a></li>
+          </ul>
+        </li>
+
+        <!-- Attendance -->
+        <li class="dropdown">
+          <input type="checkbox" id="attendance-toggle">
+          <label for="attendance-toggle" class="dropdown-label">
+            <i class="fa fa-calendar-check"></i> Attendance
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+            <li class="circle"><a href="#">Student Att. Time & Config.</a></li>
+            <li class="dot"><a href="#">Employee Att. Time & Config.</a></li>
+            <li class="dot"><a href="#">Student Manual Attendance</a></li>
+            <li class="dot"><a href="#">Special Holiday Section</a></li>
+          </ul>
+        </li>
+
+        <!-- Library -->
+        <li class="dropdown">
+          <input type="checkbox" id="library-toggle">
+          <label for="library-toggle" class="dropdown-label">
+            <i class="fa fa-book-reader"></i> Library
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+            <li class="circle"><a href="#">Building Entry</a></li>
+            <li class="dot"><a href="#">Floor Entry</a></li>
+            <li class="dot"><a href="#">Block Entry</a></li>
+            <li class="dot"><a href="#">Book Shelf Entry</a></li>
+            <li class="dot"><a href="#">Book Shelf Cell Entry</a></li>
+            <li class="dot"><a href="#">Book Category Entry</a></li>
+            <li class="dot"><a href="#">Book Entry</a></li>
+            <li class="dot"><a href="#">Book Allocation</a></li>
+          </ul>
+        </li>
+
+        <!-- Hostel -->
+        <li class="dropdown">
+          <input type="checkbox" id="hostel-toggle">
+          <label for="hostel-toggle" class="dropdown-label">
+            <i class="fa fa-bed"></i> Hostel
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+            <li class="circle"><a href="#">Rooms</a></li>
+            <li class="dot"><a href="#">Allocation</a></li>
+          </ul>
+        </li>
+
+        <!-- Web Manager -->
+        <li class="dropdown">
+          <input type="checkbox" id="web-toggle">
+          <label for="web-toggle" class="dropdown-label">
+            <i class="fa fa-globe"></i> Web Manager
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+            <li class="circle"><a href="#">Pages</a></li>
+            <li class="dot"><a href="#">News</a></li>
+          </ul>
+        </li>
+
+        <!-- Certificates -->
+        <li class="dropdown">
+          <input type="checkbox" id="certificate-toggle">
+          <label for="certificate-toggle" class="dropdown-label">
+            <i class="fa fa-certificate"></i> Certificates
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+            <li class="circle"><a href="#">Transfer Certificate</a></li>
+            <li class="dot"><a href="#">Study Certificate </a></li>
+            <li class="dot"><a href="#">Manual Testimonial  </a></li>
+          </ul>
+        </li>
+
+        <!-- Settings -->
+        <li class="dropdown">
+          <input type="checkbox" id="settings-toggle">
+          <label for="settings-toggle" class="dropdown-label">
+            <i class="fa fa-cog"></i> Settings
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+            <li class="circle"><a href="#">Payment Collection Config.</a></li>
+            <li class="dot"><a href="#">Admission Config.</a></li>
+            <li class="dot"><a href="#">Apply For Admission Config.</a></li>
+            <li class="dot"><a href="#">Admission Form Builder</a></li>
+          </ul>
+        </li>
+
+        <!-- Leave Management -->
+        <li class="dropdown">
+          <input type="checkbox" id="leave-toggle">
+          <label for="leave-toggle" class="dropdown-label">
+            <i class="fa fa-plane"></i> Leave Management
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+            <li class="circle"><a href="#">Leave Requests</a></li>
+            <li class="dot"><a href="#">Approval</a></li>
+            <li class="dot"><a href="#">Leave Type</a></li>
+            <li class="dot"><a href="#">Leave Config</a></li>
+          </ul>
+        </li>
+
+        <!-- Download -->
+        <li class="dropdown">
+          <input type="checkbox" id="download-toggle">
+          <label for="download-toggle" class="dropdown-label">
+            <i class="fa fa-download"></i> Download
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+            <li class="circle"><a href="#">Reports</a></li>
+            <li class="dot"><a href="#">Files</a></li>
+          </ul>
+        </li>
+
+        <!-- Counseling -->
+        <li class="dropdown">
+          <input type="checkbox" id="counseling-toggle">
+          <label for="counseling-toggle" class="dropdown-label">
+            <i class="fa fa-handshake"></i> Counseling
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+            <li class="circle"><a href="#">Sessions</a></li>
+            <li class="dot"><a href="#">Reports</a></li>
+          </ul>
+        </li>
+
+        <!-- Certificate Management -->
+        <li class="dropdown">
+          <input type="checkbox" id="certmgmt-toggle">
+          <label for="certmgmt-toggle" class="dropdown-label">
+            <i class="fa fa-id-badge"></i> Certificate Management
+            <span class="arrow"><i class="fa fa-chevron-right"></i></span>
+          </label>
+          <ul class="submenu">
+            <li class="circle"><a href="#">Issue</a></li>
+            <li class="dot"><a href="#">Verify</a></li>
+          </ul>
+        </li>   
+        
+      </ul>
+    </nav>
+
+    <div class="sidebar-footer">
+      <p>Powered By: <b>AdvanceEdu Solution</b> 2025</p>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Top Bar -->
+    
+
+    <main class="main-content">
+      <!-- Topbar -->
+      <header class="topbar">
+        <button class="hamburger" onclick="document.querySelector('.sidebar').classList.toggle('active')">☰</button>
+          <h2>Good Night, Hossain!</h2>
+          <div class="right">
+            <p>Your SMS Balance is: <b>0.76 BDT</b></p>
+            <i class="fa fa-moon"></i>
+            <img src="image/logo.jpeg" alt="User">
+          </div>
+        </header>
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+          <a >Dashboard</a> <span>›</span>
+          <a >Global Configuration</a> <span>›</span>
+          Session Setup
+        </div>
+          <!-- MAIN CONTENT -->
+          <div class="main-content">
+    
+            <!-- TOPBAR -->
+            <header class="topbar">
+              <h2>Session Setup</h2>
+            </header>
+            <main class="main-content">
+
+              <!-- Session Form -->
+              <div class="card">
+                <h3>Session Information</h3>
+                <form>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label>Session Name <span class="required">*</span></label>
+                      <input type="text" placeholder="Session Name">
+                    </div>
+                    <div class="form-group">
+                      <label>Roll Identifier <span class="required">*</span></label>
+                      <input type="text" placeholder="Roll Identifier">
+                    </div>
+                    <div class="form-group">
+                      <label>Session Type <span class="required">*</span></label>
+                      <select>
+                        <option>Select Session Type</option>
+                        <option>Single Year</option>
+                        <option>Mixed Year</option>
+                      </select>
+                    </div>
+                    <div class="form-group align-end">
+                      <button type="submit" class="btn">Save</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+          
+              <!-- Session List -->
+              <div class="card">
+                <h3>Session List</h3>
+                <div class="table-actions">
+                  <label>
+                    Show
+                    <select>
+                      <option>10</option>
+                      <option>25</option>
+                      <option>50</option>
+                    </select>
+                    entries
+                  </label>
+                  <input type="text" class="search-box" placeholder="Search...">
+                </div>
+          
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>No.</th>
+                      <th>Session Name</th>
+                      <th>Roll Identifier</th>
+                      <th>Session Type</th>
+                      <th>Is Current</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>2025-2026</td>
+                      <td>25</td>
+                      <td>Mixed Year</td>
+                      <td>No</td>
+                      <td><span class="status active">Active</span></td>
+                      <td>
+                        <button class="btn-edit">✏</button>
+                        <button class="btn-deactive">✖</button>
+                        <button class="btn-current">Make Current</button>
+                        <button class="btn-generate">Generate</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>2025</td>
+                      <td>25</td>
+                      <td>Single Year</td>
+                      <td>No</td>
+                      <td><span class="status active">Active</span></td>
+                      <td>
+                        <button class="btn-edit">✏</button>
+                        <button class="btn-deactive">✖</button>
+                        <button class="btn-current">Make Current</button>
+                        <button class="btn-generate">Generate</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          
+            </main>
+
+  
+<!--
+  <script>
+    // Handle submenus
+    document.querySelectorAll('.sidebar .dropdown > input[type="checkbox"]').forEach(checkbox => {
+      checkbox.addEventListener('change', function () {
+        if (this.checked) {
+          // close all siblings
+          document.querySelectorAll('.sidebar .dropdown > input[type="checkbox"]').forEach(other => {
+            if (other !== this) other.checked = false;
+          });
+        }
+      });
+    });
+  
+    // Handle sub-submenus
+    document.querySelectorAll('.sidebar .sub-dropdown > input[type="checkbox"]').forEach(checkbox => {
+      checkbox.addEventListener('change', function () {
+        if (this.checked) {
+          // close all sibling sub-submenus
+          this.closest('.submenu').querySelectorAll('.sub-dropdown > input[type="checkbox"]').forEach(other => {
+            if (other !== this) other.checked = false;
+          });
+        }
+      });
+    });
+  </script>
+  
+
+-->
+
+
+</body>
+</html>

@@ -1,0 +1,316 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  background: #dfe1e4;
+}
+
+.menu-heading {
+  font-size: 12px;
+  font-weight: bold;
+  color: #999;               /* grey color */
+  text-transform: uppercase; /* make it all caps */
+  padding: 10px 20px;
+  letter-spacing: 1px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  min-width: 220px;
+  height: 100vh;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 10px;
+  overflow-y: auto;
+  transition: left 0.3s ease;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  text-align: center;
+  padding: 15px;
+}
+.sidebar-header img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+.sidebar-header h3 {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Navigation */
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar nav ul li {
+  padding: 6px;
+  font-size: 14px;
+  color: #444;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+.sidebar nav ul li i {
+  margin-right: 8px;
+}
+.sidebar nav ul li:hover,
+.sidebar nav ul li.active {
+  background: #f0f5ff;
+  color: #006f8e;
+}
+
+/* Dropdown */
+.dropdown input {
+  display: none;
+}
+.dropdown-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+.dropdown .arrow {
+  margin-left: auto;
+  transition: transform 0.3s;
+}
+.dropdown input:checked + .dropdown-label .arrow {
+  transform: rotate(90deg);
+}
+
+/* Submenu */
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  list-style: none;
+  padding-left: 20px;
+  transition: max-height 0.3s ease;
+  background: #f9fafc;
+}
+.dropdown input:checked ~ .submenu {
+  max-height: 1000px;
+}
+.submenu li {
+  padding: 3px 0;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+/* Custom bullets */
+.submenu li.circle::before {
+  content: "◦";
+  color: #2d2d5a;
+  margin-right: 5px;
+  font-size: 12px;
+}
+.submenu li.dot::before {
+  content: "•";
+  color: #006f8e;
+  margin-right: 5px;
+  font-size: 12px;
+}
+.submenu a {
+  text-decoration: none;
+  color: #006f8e;
+}
+
+
+/* Sub-dropdown (Institute Setup under dot) */
+.sub-dropdown > .dropdown-label {
+  font-size: 14px;
+  padding-left: 0px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #006f8e;
+}
+.sub-dropdown > .dropdown-label::before {
+  content: "•";
+  color: #006f8e;
+  margin-right: 5px;
+  font-size: 12px;
+}
+.sub-submenu {
+  padding-left: 20px;
+  background: #f9fafc;
+}
+.sub-submenu li {
+  padding: 0px 0;
+  font-size: 12px;
+}
+.sub-submenu li::before {
+  content: "◦";
+  margin-right: 5px;
+  color: #2d2d5a;
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+  border-top: 1px solid #eee;
+  color: #777;
+}
+
+/* Menu Scroll */
+.sidebar nav {
+  flex: 1; /* take remaining space */
+  overflow-y: auto; /* scroll only here */
+  padding: 0 0 10px 0;
+}
+
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  position: relative;
+}
+.topbar p {
+  font-size: 14px;
+}
+.topbar .profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.topbar img {
+  width: 35px;
+  border-radius: 50%;
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: flex;
+  font-size: 22px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* Greeting */
+.greeting {
+  margin-bottom: 20px;
+}
+.greeting h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card {
+  background: #fff;
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.card h3 {
+  font-size: 14px;
+  color: #333;
+}
+.card .number {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.card small {
+  color: #777;
+}
+
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  padding: 12px 20px;
+  text-align: right;
+  font-size: 13px;
+  color: #666;
+}
+.footer b {
+  color: #006f8e;
+}
+
+/* Responsive Sidebar + Hamburger */
+@media (max-width: 992px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    z-index: 1000;
+    height: 100%;
+  }
+  .sidebar.active {
+    left: 0;
+  }
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .sidebar-header h3 {
+    font-size: 12px;
+  }
+  .sidebar-header img {
+    width: 45px;
+    height: 45px;
+  }
+  .submenu {
+    padding-left: 15px;
+  }
+  .topbar p {
+    font-size: 12px;
+  }
+  .card h3 {
+    font-size: 13px;
+  }
+  .card .number {
+    font-size: 20px;
+  }
+  .footer {
+    font-size: 12px;
+    text-align: center;
+  }
+}
